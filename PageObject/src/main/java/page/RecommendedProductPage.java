@@ -30,6 +30,7 @@ public class RecommendedProductPage extends Page {
 
     public CartPage addProductToCart() {
         addRecommendedToCart.click();
+        saveLastNotification();
         return new CartPage(driver, this);
     }
 }

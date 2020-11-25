@@ -17,6 +17,9 @@ public class TShirtPage extends Page {
     @FindBy(xpath = "//div[div[normalize-space()='Термочашка']]")
     private WebElement recommendedProduct;
 
+    @FindBy(css = "div.default-header-cart")
+    private WebElement openCartButton;
+
     private String buttonSelectSizeLocator = "//button[normalize-space()='$']";
 
     public TShirtPage(WebDriver driver) {
@@ -33,6 +36,12 @@ public class TShirtPage extends Page {
 
     public CartPage clickAddToCartButton() {
         addToCart.click();
+        saveLastNotification();
+        return new CartPage(driver, this);
+    }
+
+    public CartPage openCart() {
+        openCartButton.click();
         return new CartPage(driver, this);
     }
 
