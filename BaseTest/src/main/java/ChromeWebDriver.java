@@ -17,7 +17,7 @@ public class ChromeWebDriver {
     public static WebElement recommendedProductSize;
 
     public static void initialization(){
-        System.setProperty("webdriver.chrome.driver", "D:\\Main\\Labs\\3\\АПТ\\Drivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "D:\\Main\\Labs\\3\\Drivers\\chromedriver.exe");
         driver = new ChromeDriver();
 
         driver.get("https://jolybell.com/product/1");
